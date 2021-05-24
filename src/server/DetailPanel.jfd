@@ -1,0 +1,60 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.9.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "200, left:200"
+			"$rowSpecs": "100, 300, 50"
+			"$alignTop": true
+			"$alignLeft": true
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "title"
+				"editable": false
+				"horizontalAlignment": 0
+				"font": new java.awt.Font( "SansSerif", 0, 20 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridwidth": 2
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				"horizontalScrollBarPolicy": 31
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "actionsText"
+					"text": "Actions performed:\n"
+					"font": new java.awt.Font( "Source Code Pro", 0, 20 )
+					"editable": false
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 1
+				"hAlign": 5
+				"gridwidth": 2
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "backButton"
+				"text": "Back "
+				"font": new java.awt.Font( "SansSerif", 0, 20 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "backButtonActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 2
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "disconnectButton"
+				"text": "Force disconnect"
+				"font": new java.awt.Font( "SansSerif", 3, 18 )
+				"mnemonic": 68
+				"toolTipText": "Click to force disconnect this client, other clients are not affected"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "disconnectButtonActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 2
+				"hAlign": 0
+				"gridx": 1
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 455, 430 )
+		} )
+	}
+}

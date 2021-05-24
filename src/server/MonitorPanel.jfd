@@ -1,0 +1,62 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.9.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "200, left:200"
+			"$rowSpecs": "100, 50, 300"
+			"$alignTop": true
+			"$alignLeft": true
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "title"
+				"editable": false
+				"horizontalAlignment": 0
+				"text": "Monitor connections"
+				"font": new java.awt.Font( "Nirmala UI", 0, 36 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridwidth": 2
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "latestActionText"
+				"horizontalAlignment": 0
+				"editable": false
+				"text": "Latest actions will appear here"
+				"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 1
+				"gridwidth": 2
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				"horizontalScrollBarPolicy": 31
+				add( new FormComponent( "javax.swing.JList" ) {
+					name: "clientList"
+					"selectionMode": 0
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 26 )
+					"prototypeCellValue": "12345"
+					addEvent( new FormEvent( "javax.swing.event.ListSelectionListener", "valueChanged", "clientListValueChanged", true ) )
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 2
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "detailsButton"
+				"text": "Details"
+				"font": new java.awt.Font( "Microsoft YaHei UI", 0, 26 )
+				"enabled": false
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "detailsButtonActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 2
+				"vAlign": 0
+				"hAlign": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 415, 485 )
+		} )
+	}
+}

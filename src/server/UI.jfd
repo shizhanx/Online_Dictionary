@@ -1,0 +1,73 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.9.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.CardLayout ) ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"resizable": false
+			"title": "Dictionary Server"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "600:1.0"
+				"$rowSpecs": "30, 30, 100:1.0, 50:1.0, 0:1.0"
+				"$hGap": 5
+				"$vGap": 5
+				"$alignTop": true
+				"$alignLeft": true
+			} ) {
+				name: "initialPanel"
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField3"
+					"editable": false
+					"text": "Welcome to the server side GUI of"
+					"horizontalAlignment": 0
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"vAlign": 3
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField4"
+					"editable": false
+					"text": "the ONE and the ONLY"
+					"horizontalAlignment": 0
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 20 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 1
+					"vAlign": 1
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "initialTitle"
+					"editable": false
+					"font": new java.awt.Font( "Footlight MT Light", 1, 40 )
+					"text": "ONLINE DICTIONARY"
+					"horizontalAlignment": 0
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 2
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "startButton"
+					"text": "Start monitor"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 18 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "startButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 3
+					"hAlign": 0
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "mySignature"
+					"editable": false
+					"text": "Shizhan Xu, 771900, All rights reserved"
+					"horizontalAlignment": 11
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 4
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "card1"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 555, 370 )
+		} )
+	}
+}
